@@ -1,0 +1,83 @@
+#music-btn {
+    background: rgba(230, 230, 230, 0.5);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+}
+
+.music-player {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 13px;
+    height: 13px;
+}
+
+.music-player > span {
+    width: 3px;
+    height: 100%;
+    background-color: #7c3aed;
+    border-radius: 3px;
+    transform-origin: bottom;
+    animation: barAnim 2.2s ease infinite alternate;
+    content: '';
+}
+
+.music-player.paused > span {
+    width: 3px;
+    height: 25%;
+    transform: translateY(10px);
+    background-color: #7c3aed;
+    border-radius: 3px;
+    transform-origin: bottom;
+    animation: none;
+    content: '';
+}
+
+.music-player > span:nth-of-type(2) {
+    animation-delay: -2.2s;
+   /* Start at the end of animation */
+}
+
+.music-player > span:nth-of-type(3) {
+    animation-delay: -3.7s;
+   /* Start mid-way of return of animation */
+}
+
+.music-title {
+    font-size: 10px;
+    margin-left: 10px;
+    text-align: left;
+    white-space: nowrap;
+    max-width: calc(100vw - 100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 420px) {
+    .music-title {
+        max-width: 300px;
+    }
+}
+
+@keyframes barAnim {
+    10% {
+        transform: scaleY(0.3);
+       /* start by scaling to 30% */
+   }
+    30% {
+        transform: scaleY(1);
+       /* scale up to 100% */
+   }
+    60% {
+        transform: scaleY(0.5);
+       /* scale down to 50% */
+   }
+    80% {
+        transform: scaleY(0.75);
+       /* scale up to 75% */
+   }
+    100% {
+        transform: scaleY(0.6);
+       /* scale down to 60% */
+   }
+}

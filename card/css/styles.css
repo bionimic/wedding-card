@@ -1,0 +1,766 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+  --first-color: #6F42C1;
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background-image: url(../../img/marriednow-project/card-bg.jpg);
+}
+
+.main-div {
+  max-width: 420px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 2rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 420px;
+  margin: auto;
+}
+
+/*=============== LOADING ===============*/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #f7fafd;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #aa7eec;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+/*=============== START ===============*/
+
+.start {
+  z-index: 99999;
+  max-width: 420px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+.start-overlay {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.tutorial-overlay {
+  position: fixed;
+  max-width: 420px;
+  top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 9999999;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.start-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: auto;
+  z-index: 100;
+  border-radius: 1em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 420px;
+}
+
+.nav__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__menu {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--container-color);
+  box-shadow: 0 3px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  display: grid;
+  align-content: center;
+  border-radius: 1.25rem 1.25rem 0 0;
+  transition: .4s;
+  max-width: 420px;
+  z-index: 999;
+}
+
+.nav__list, 
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link .bx, .active-link .nav__name {
+  position: relative;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+
+/*=============== MAIN CARD ===============*/
+.main-card {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  text-align: center;
+  width: 75%;
+}
+
+.card-opening {
+  font-size: 16px;
+  margin-bottom: 2em;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+}
+
+.card-couple {
+  margin-bottom: 2em;
+}
+
+.card-groom, .card-bride, .card-with {
+  font-size: 72px;
+  font-family: 'Tangerine', serif;
+  /* text-shadow: 0px 0px 2px #fff; */
+  line-height: 1em;
+}
+
+.card-date {
+  font-size: 24px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-location {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+}
+
+.card-verse {
+  font-size: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.card-opening, .card-date, .card-location {
+  /* text-shadow: 0px 0px 2px #fff */
+}
+
+.scroll {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+/*=============== MUSIC ===============*/
+.music {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 25px;
+}
+
+.music > audio {
+  width: 100%;
+}
+
+/*=============== WEDDING INFO ===============*/
+
+.wedding-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-greeting, .info-details {
+  font-size: 16px;
+}
+
+.info-invitor, .info-greeting {
+  margin-bottom: 30px;
+}
+
+.info-invitor > p {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+}
+
+.info-schedule {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+td.time {
+  width: 45%;
+  text-align: left;
+}
+
+td.gap {
+  width: 5%;
+}
+
+td.event {
+  text-align: right;
+}
+
+/*=============== COUNTDOWN & GALLERY ===============*/
+
+.countdown, .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/*=============== MONEY GIFT ===============*/
+.gift-btn {
+  bottom: 0;
+  background-color: var(--container-color);
+  box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  align-content: center;
+  border-radius: 1.25rem;
+  transition: .4s;
+  max-width: 420px;
+  border: 1px solid #52605F;
+}
+
+.gift-btn:hover {
+  box-shadow: 0 3px 12px hsla(var(--hue), var(--sat), 15%, 0.5);
+}
+
+.gift-btn-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-icon {
+  font-size: 2rem;
+}
+
+.gift-title {
+  font-size: 24px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.save-btn, .close-btn {
+  background-color: #FFF;
+  padding: 2px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--text-color);
+}
+
+.save-btn > i, .save-btn > span, .close-btn > i, .close-btn > span {  
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.moneygift-modal.active {
+  display: block;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/*=============== PRAYER ===============*/
+.prayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prayer-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+}
+
+/*=============== FOOTER ===============*/
+p.hashtag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  margin-top: 3rem;
+}
+
+/*=============== FEATURE ===============*/
+
+.feature-main {
+  pointer-events: none;
+  position: relative;
+  z-index: 99;
+}
+
+.feature-main.active {
+  pointer-events: all;
+}
+
+.overlay.preload {
+  display: none;
+}
+
+.overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 10;
+  -webkit-animation-name: fadeOut; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+.overlay.active {
+  pointer-events: all;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.feature-card {
+  transition: max-height 0.25s ease-in;
+
+  background-color: #FFF;
+  width: 100%;
+  padding: 10px 0px 75px 0px;
+  border-radius: 1.25rem 1.25rem 0 0;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 420px;
+  max-height: 100vh;
+  z-index: 9999;
+  display: none;
+  overflow: auto;
+  box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+  -webkit-animation-name: slideOut;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideOut;
+  animation-duration: 0.4s;
+}
+
+.feature-card.active {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 100vh;
+  display: block;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+.feature-content {
+  margin: 20px;
+}
+
+.feature-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/*=============== CONTACT ===============*/
+.contact {
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 18px;
+  padding-top: 10px;
+  color: var(--text-color);
+}
+
+.number > a > i {
+  padding-left: 10px;
+  font-size: 20px;
+  padding-top: 10px;
+  color: var(--text-color);
+}
+
+.bx {
+  color: var(--text-color);
+}
+
+/*=============== LOCATION ===============*/
+.location {
+  width: 100%;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.location-icon > a > i, .location-icon > a > span {
+  color: var(--text-color);
+}
+
+/*=============== CALENDAR ===============*/
+.calendar {
+  width: 100%;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.calendar-icon:first-of-type {
+  padding-bottom: 20px;
+}
+
+.calendar-icon > a > i, .calendar-icon > a > span {
+  color: var(--text-color);
+}
+
+.color-calendar.basic .calendar__header {
+  padding: 5px 5px 0px 5px !important;
+}
+
+.color-calendar.basic .calendar__body {
+  padding: 5px !important;
+}
+
+/*=============== GUESTBOOK ===============*/
+.guestbook-main {
+  text-align: center;
+}
+
+p.guestbook-comment  {
+  font-size: 20px;
+  font-family: 'Marck Script', cursive;
+}
+
+.wish-btn {
+  background-color: #FFF;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--text-color);
+}
+
+.wish-btn > i, .wish-btn > span {  
+  font-size: 14px;
+  font-weight: bold;
+}
+
+element.style {
+  display: none;
+}
+
+/*=============== RSVP ===============*/
+
+.rsvp-btn {
+  background-color: #FFF;
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid var(--text-color);
+}
+
+.rsvp-btn > i, .rsvp-btn > span {  
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes slideOut {
+  from {bottom: 0; opacity: 1} 
+  to {bottom: -300px; opacity: 0}
+}
+
+@keyframes slideOut {
+  from {bottom: 0; opacity: 1}
+  to {bottom: -300px; opacity: 0}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@-webkit-keyframes fadeOut {
+  from {opacity: 1} 
+  to {opacity: 0}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1} 
+  to {opacity: 0}
+}

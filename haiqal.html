@@ -1,0 +1,655 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="color-scheme" content="light only">
+        <meta property="og:site" content="https://eiqalhalim.github.io/haiqal-linda-solemnization/">
+        <meta property="og:title" content="Walimatulurus | Haiqal&#9829;Linda">
+        <meta property="og:description" content="Tekan pautan untuk lihat jemputan"> 
+        <meta property="og:image" content="img/marriednow-project/gambar-jemputan.jpg">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="card/css/styles.css">
+        <link rel="stylesheet" href="card/css/action.css">
+        <link rel="stylesheet" href="card/css/player.css">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+        <!-- Slick Carousel -->
+        <link href="js/plugins/slick/slick.css" rel="stylesheet">
+        <link href="js/plugins/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Flipdown -->
+        <link rel="stylesheet" type="text/css" href="js/plugins/flipdown/flipdown.css">
+        <script type="text/javascript" src="js/plugins/flipdown/flipdown.js"></script>
+        
+
+        <!-- SweetAlert2 -->
+        <link rel="stylesheet" href="js/plugins/sweetalert2/sweetalert2.min.css">
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <title>Haiqal&#9829;Linda</title>
+        <link rel="shortcut icon" href="img/icon-2.png">
+        <link rel="icon" href="img/icon-2.png" sizes="192x192">
+
+        <!-- Color Calendar -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css">
+
+        
+    </head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="">
+    <!-- Preloader -->
+    <div class="spinner-wrapper" style="display: none;">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="tutorial-overlay hidden" style="background-color: rgba(0,0,0,0.5)">
+        <div class="start-content">
+            <div class="flex justify-center pb-5">
+                <img src="img/marriednow-project/swipe.png" style="height: 100px" alt="Swipe Logo">
+            </div>
+            <p class="pb-5" style="color: #fff"><b>Swipe Atas Untuk Lebih Maklumat</b></p>
+            <button class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 rounded-full text-sm px-3.5 py-2.5  mt-3 mb-3" id="tutorial-btn"><b> OKAY </b></button>
+        </div>
+    </div>    
+    <!-- end of preloader -->    
+    <div class="start aos-init aos-animate" data-aos="fade-in" data-aos-duration="1000">
+        <main>                                  
+            <section class="container section__height main-card" style="background-image: url('img/marriednow-project/background-card.jpg')">
+                <div class="start-overlay">
+                    <div class="start-content">                                                                   
+                        <div class="card-opening">                         
+                            <p class="animated fadeInDown main_text drop-shadow-md">Walimatulurus</p>
+                        </div>
+                        <div class="card-couple">
+                            <p class="card-groom animated zoomIn main_text">Haiqal</p>
+                            <p class="card-with animated zoomIn main_text">&amp;</p>
+                            <p class="card-bride animated zoomIn main_text">Linda</p>
+                        </div>
+                        <button class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 rounded-full text-sm px-3.5 py-2.5  mt-3 mb-3" id="start-btn">
+                            <b> BUKA </b>
+                        </button>                        
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="main-div hidden">             
+         <!--=============== NAV ===============-->
+            <nav class="nav container">
+                <div class="nav__menu animated fadeInUp" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a type="button" id="rsvp" class="nav__link">
+                                <i class="bx bx-receipt nav__icon"></i>
+                                <span class="nav__name">RSVP</span>
+                            </a>
+                        </li>            
+
+                        <li class="nav__item ">
+                            <a type="button" id="moneygift" class="nav__link">
+                                <i class="bx bx-gift nav__icon"></i>
+                                <span class="nav__name">Money Gift</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a type="button" id="contact" class="nav__link">
+                                <i class="bx bx-phone nav__icon"></i>
+                                <span class="nav__name">Contact</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a type="button" id="location" class="nav__link">
+                                <i class="bx bx-map-pin nav__icon"></i>
+                                <span class="nav__name">Location</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a type="button" id="calendar" class="nav__link">
+                                <i class="bx bx-calendar nav__icon"></i>
+                                <span class="nav__name">Calendar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+        <main>
+           
+        <!--=============== FEATURE ===============-->
+    <div class="feature-main">
+        <div class="feature-card" id="rsvpModal">
+            <div class="feature-content">
+                <h2 class="feature-title">RSVP</h2>
+                <div id="rsvp-button" class="text-center">
+                    <div class="flex justify-center pt-3 pb-0">
+                        <button class="rsvp-btn w-1/2 mr-1" id="rsvp-btn-1" type="submit">
+                            <i class="fas fa-check nav__icon"></i>
+                            <span> Hadir</span>
+                        </button>
+                        <button class="rsvp-btn w-1/2 ml-1" id="rsvp-btn-2" type="submit">
+                            <i class="fas fa-times nav__icon"></i>
+                            <span> Tidak Hadir</span>
+                        </button>
+                    </div>
+                </div>
+                <form action="rsvp/create" method="POST" id="rsvp_form">
+                    <input type="hidden" name="_token" value="KezRWEutCUS6xdl5kdeyvR2YdwXQTjeZ0A2T3APy">            <div id="rsvp-form" class="text-center hidden">
+                        <input type="hidden" name="event_id" value="64ab8f3a0f51c">
+                        <input type="hidden" name="limit" id="limit" value="10">
+                        <input type="hidden" name="status" value="">
+                        <p class="pb-1">Nama Anda</p>
+                        <input class="border border-gray-400 p-2 w-full rounded h-8" type="text" name="name" required="">
+                        <p class="pb-1 pt-3">Nombor Telefon</p>
+                        <input class="border border-gray-400 p-2 w-full rounded h-8" type="tel" name="contact" required="">
+                        <div id="rsvp_hidden">
+                            <p class="pb-1 pt-3">Jumlah Dewasa (18 Tahun Ke Atas)</p>
+                            <select class="border border-gray-400 p-1 pl-2 w-full rounded h-8 appearance-none bg-white" name="attendance_adult" onchange="rsvp_adult(this)" id="adult_limit">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                    </select>
+                            <p class="pb-1 pt-3">Jumlah Kanak-kanak (6-17 Tahun)</p>
+                            <select class="border border-gray-400 p-1 pl-2 w-full rounded h-8 appearance-none bg-white" name="attendance_child" onchange="rsvp_child(this)" id="child_limit">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                    </select>
+                        </div>
+                        <div class="flex justify-center pt-5 pb-0">
+                            <button class="wish-btn mr-1" type="submit">
+                                <i class="fas fa-paper-plane nav__icon"></i>
+                                <span> Hantar</span>
+                            </button>                
+                            <button class="close-btn ml-1" id="cancel-rsvp" type="reset">
+                                <i class="fas fa-times nav__icon"></i>
+                                <span> Batal</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="feature-card" id="contactModal">
+            <div class="feature-content">
+                <h2 class="feature-title">Contact</h2>
+                <ul class="contact">
+                    <li class="contact-item">
+                        <span class="name">Halim</span>
+                        <div class="number">
+                            <a href="tel:0123917203"><i class="fa fa-phone nav__icon"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=601239172036" target="_blank">
+                                <i class="fab fa-whatsapp nav__icon"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <span class="name">Ramlah</span>
+                        <div class="number">
+                            <a href="tel:0162679646"><i class="fa fa-phone nav__icon"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=60162679646" target="_blank">
+                                <i class="fab fa-whatsapp nav__icon"></i>
+                            </a>
+                        </div>
+                    </li>    
+                    <li class="contact-item">
+                        <span class="name">Roshafiza</span>
+                        <div class="number">
+                            <a href="tel:0148494771"><i class="fa fa-phone nav__icon"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=60148494771 target="_blank">
+                                <i class="fab fa-whatsapp nav__icon"></i>
+                            </a>
+                        </div>
+                    </li>    
+                        <li class="contact-item">
+                            <span class="name">Julia</span>
+                            <div class="number">
+                                <a href="tel:0172073270"><i class="fa fa-phone nav__icon"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=0172073270" target="_blank"><i class="fab fa-whatsapp nav__icon"></i></a>
+                            </div>
+                        </li> 
+                        
+                        <li class="contact-item">
+                            <span class="name">Liza</span>
+                            <div class="number">
+                                <a href="tel:018762929"><i class="fa fa-phone nav__icon"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=6018762929" target="_blank"><i class="fab fa-whatsapp nav__icon"></i></a>
+                            </div>
+                        </li> 
+                        <li class="contact-item">
+                            <span class="name">Diana</span>
+                            <div class="number">
+                                <a href="tel:01111275392"><i class="fa fa-phone nav__icon"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=601111275392" target="_blank"><i class="fab fa-whatsapp nav__icon"></i></a>
+                            </div>
+                        </li> 
+                            
+                </ul>
+            </div>    
+        </div> 
+        <div class="feature-card" id="locationModal">
+                <div class="feature-content">
+                    <h2 class="feature-title">Location</h2>
+                    <p class="text-center pb-5 text-lg">
+                        MZ Fountain Hall, Kampung Sungai Ramal Luar, 43000 Kajang, Selangor
+                    </p>
+                    <div class="border-2 border-slate-500">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15937.674873226357!2d101.7650713!3d2.9811988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb95ceb6bb41%3A0x1cb15b3d60eefd31!2sMZ%20Fountain%20Hall!5e0!3m2!1sen!2smy!4v1691237751763!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <ul class="location pt-5">
+                        <li class="location-icon">
+                            <a target="_blank" href="https://goo.gl/maps/rLwwbjvmgct89f5n6">
+                                <i class="fas fa-map-marked-alt nav__icon"></i>
+                                <span> GOOGLE MAPS</span>
+                            </a>  
+                        </li>
+                        <li class="location-icon">
+                            <a target="_blank" href="https://waze.com/ul/hw282gwxn9">
+                                <i class="fab fa-waze nav__icon"></i>
+                                <span> WAZE</span>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>    
+        </div>
+         <input type="hidden" value="64ab8f3a0f51c" id="event_id">
+
+        <div class="feature-card" id="bookModal">
+            <div class="feature-content">
+                <h2 class="feature-title">Sampaikan Ucapan</h2>
+                <form action="guestbook/create" method="POST" id="guestbook_form">
+                    <input type="hidden" name="_token" value="KezRWEutCUS6xdl5kdeyvR2YdwXQTjeZ0A2T3APy">            <div class="text-center">
+                        <input type="hidden" name="event_id" value="64ab8f3a0f51c">
+                        <p class="pb-1">Nama Anda</p>
+                        <input class="border border-gray-400 p-2 w-full rounded h-8" type="text" name="name" required="">
+                        <p class="pb-1 pt-3">Ucapan</p>
+                        <textarea class="border border-gray-400 p-2 w-full" name="wishes" id="" cols="30" rows="5" maxlength="250" required=""></textarea>
+                    </div>
+                    <div class="flex justify-center pt-5 pb-0">
+                        <button class="wish-btn mr-1" type="submit">
+                            <i class="fas fa-paper-plane nav__icon"></i>
+                            <span> Hantar</span>
+                        </button>                
+                        <button class="close-btn ml-1" id="close-btn" type="reset">
+                            <i class="fas fa-times nav__icon"></i>
+                            <span> Tutup</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="feature-card" id="calendarModal">
+            <h2 class="feature-title">Calendar</h2>
+            <p class="text-center pb-5 text-lg">
+                Ahad, 10 September 2023
+            </p>
+            <input type="hidden" id="event_date" value="2023-09-10">
+            <div id="color-calendar" class="pb-5"></div>
+            <ul class="calendar">
+                <li class="calendar-icon">
+                    <a href="/storage/ical/haiqal_linda_wedding.ics">
+                        <i class="fab fa-apple nav__icon"></i>
+                        <span>Add to Apple Calendar</span>
+                    </a> 
+                </li>
+                <li class="calendar-icon">
+                    <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MzVidmF2aWlxc2JnNW9hZ2VvZ3ExNmRwdG0gbW9oZGhhaXFhbGhhbGltQG0&amp;tmsrc=mohdhaiqalhalim%40gmail.com">
+                        <i class="fab fa-google nav__icon"></i>
+                        <span>Add to Google Calendar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="feature-card" id="moneygiftModal">
+            <div class="feature-content">
+                <h2 class="feature-title">Money Gift</h2>
+                <div class="text-center text-lg">
+                        <h1>Bank info</h1>
+                            <!-- <p class="pb-1">Nama Bank</p>
+                            <p class="bg-gray-100 p-1 w-full rounded text-center">Maybank Berhad</p>
+                            <p class="pb-1 pt-3">No Akaun</p>
+                            <p class="bg-gray-100 p-1 w-full rounded text-center">162825052454
+                                <a href="javascript:void(0)" onclick="copyAccount('162825052454')"><i class="far fa-clone"></i></a>
+                            </p>
+                                                            <p class="pb-1 pt-3">Kod QR</p>
+                            <div class="w-full flex justify-center">
+                                <img src="https://kahwinnow.com/storage/qr/jY5AFPfTxuevcO2mfXg4huetCED9R6nAInEbGchs.jpg" class="w-64 rounded border-8 border-gray-100" alt="">
+                            </div>
+                            <div class="flex justify-center pt-5">
+                                <a class="save-btn" type="button" href="https://kahwinnow.com/storage/qr/jY5AFPfTxuevcO2mfXg4huetCED9R6nAInEbGchs.jpg" download="">
+                                    <i class="fas fa-download nav__icon"></i>
+                                    <span> Simpan</span>
+                                </a>
+                            </div> -->
+                                        
+                    </div>
+                </div>
+            </div>
+        <div class="overlay preload"></div>
+    </div>
+        <!--=============== MAIN CARD ===============-->
+<style>
+    .main_text {
+        text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.25);
+     color: #f4d390;
+    }
+</style>
+<section class="container section section__height main-card" id="home" style="background-image: url('img/marriednow-project/background-card.jpg')">
+    <div class="wrapper pb-16" style="transform: translate(20px, 0px);">
+        <div class="card-opening">                         
+            <p class="animated fadeInDown main_text drop-shadow-md">Walimatulurus</p>
+        </div>
+        <div class="card-couple">
+            <p class="card-groom animated zoomIn main_text">Haiqal</p>
+            <p class="card-with animated zoomIn main_text">&amp;</p>
+            <p class="card-bride animated zoomIn main_text">Linda</p>
+        </div>
+        <p class="card-date animated fadeIn main_text">
+            <span style="font-size: 25px;">Ahad</span>
+            <br>
+            <span>Sept</span>
+            <span>10</span>,
+            <span>2023</span>
+        </p>
+        <p class="card-location animated fadeInUp main_text">
+            MZ Fountain Hall,Kajang
+        </p>
+    </div>               
+</section>
+
+        <!--=============== MUSIC ===============-->
+    <div class="music">
+                    <!-- <audio controls="" loop="" id="audio" controlslist="nodownload" class="hidden">
+                <source src="https://kahwinnow.com/storage/music/ToG0r21jR1U50jWCUcCrJlFcaOwzUXc3LRo2gA2Z.mp3" type="audio/mpeg">
+            </audio>
+                <button id="music-btn" class="text-black font-bold py-2 px-4 rounded-full flex">
+            <div class="music-player">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="music-title">Arvian Dwi - Satu Shaf Di Belakangku</span>
+        </button> -->
+    </div>
+        
+        <!--=============== EVENT INFO ===============-->
+    <section class="container section wedding-info aos-init aos-animate" id="info" data-aos="fade-up" data-aos-duration="1000">
+        <div class="wrapper">
+        <p class="info-greeting aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+            ASSALAMUALAIKUM WBT &amp; SALAM SEJAHTERA
+        </p>
+        <div class="info-invitor aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                <p style="font-size: 16px">
+                    <b>KELUARGA PENGANTIN LELAKI</b>
+                </p>
+                <p>Halim Bin Haron</p>
+                <hr class="h-px bg-gray-200 border-0 dark:bg-gray-800">  
+                <p>Ramlah Binti Mohammed</p>             
+                <p class="pt-3 pb-3">&amp;</p>                    
+                <p style="font-size: 16px">
+                    <b>KELUARGA PENGANTIN PEREMPUAN</b>
+                </p>
+                <p>Mohmad Bin Hussin</p>
+                <hr class="h-px bg-gray-200 border-0 dark:bg-gray-800">
+                <p>Norizan Binti Senin</p>
+        </div>
+                        
+            
+        <p class="info-greeting aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+            Menjemput Dato'/Datin, Tuan/Puan, Encik/Cik ke walimatulurus
+        </p>   
+        <div class="info-invitor aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+            <p>Mohamad Haiqal bin Halim</p>
+            <p>&amp;</p>
+                <p>Mas Linda binti Mohmad</p>
+        </div>
+        <div class="info-details aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+            <p><b style="color: #be822b">Tarikh</b></p>
+            <p>Ahad,
+                10
+                September
+                2023</p>
+            <br>
+            <p><b style="color: #be822b">Masa</b></p>
+            <p>11:00 Pagi -
+                4:00 Petang</p>
+            <br>
+            <p><b style="color: #be822b">Tempat</b></p>
+            <p>
+                MZ Fountain Hall, Kampung Sg Ramal Luar, Kajang
+            </p>
+        </div>
+        <div class="info-schedule aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+            <p><b style="color: #be822b">Aturcara Majlis</b></p>
+                <table class="w-full">
+                    <tbody><tr>
+                        <td class="event">Majlis Bermula</td>
+                        <td class="gap"></td>
+                        <td class="time">11:00 Pagi</td>
+                    </tr>
+                    <tr>
+                        <td class="event">Ketibaan Pengantin</td>
+                        <td class="gap"></td>
+                        <td class="time">12:30 Tengah Hari</td>
+                    </tr>
+                    <tr>
+                        <td class="event">Majlis Berakhir</td>
+                        <td class="gap"></td>
+                        <td class="time">4:00 Petang</td>
+                    </tr>                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</section> 
+    <!--=============== COUNTDOWN ===============-->
+    <div data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">
+        <img src="img/marriednow-project/divider.png" alt="" class="pl-5 pr-5">
+        <section class="container section countdown">
+
+            <div class="wrapper w-full">
+                <h3 class="section-title">Menanti Hari</h3>
+                <div id="flipdown" class="flipdown flex justify-center m-auto"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Unix timestamp (in seconds) to count down to
+            var eventDate = '1694343600';
+
+            // Set up FlipDown
+            var flipdown = new FlipDown(parseInt(eventDate))
+
+                // Start the countdown
+                .start()
+        });
+    </script>
+    <!--=============== PRAYER ===============-->
+    <section class="container section prayer aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+        <div class="wrapper absolute mt-3" style="width: 85%">
+            <p class="prayer-text">
+                Ya Allah, berkatilah satukanlah hati kedua pasangan mempelai ini dengan iman, keyakinan dan tawakal kepadaMu, panjangkan umur mereka, lapangkanlah rezeki mereka, dekatlah mereka menuju kebaikan, jauhkanlah mereka dari keburukan, kurniakanlah mereka zuriat yang soleh dan solehah.
+            </p>
+        </div>
+        <img src="img/marriednow-project/bg-prayer.png" alt="">
+    </section>            
+</main>
+
+         <footer>
+    <ul class="pb-20">
+        <li class="pb-10">
+            <p class="hashtag text-center" style="font-size: 20px">#HaiqalfalLinlove</p>
+        </li>
+        <li class="flex justify-center text-center">
+            <p>
+                Created with <span class="text-red-500"><i class="fa fa-heart"></i></span> by<br>
+                Haiqal Halim
+            </p>
+        </li>
+    </ul>    
+</footer> 
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="js/plugins/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/plugins/slick/slick.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="js/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Color Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.min.js"></script>
+
+    <script type="text/javascript">
+        AOS.init();
+
+        /* Preloader */
+        $(window).on('load', function() {
+            var preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                setTimeout(function() {
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }, 500);
+            }
+            hidePreloader();
+        });
+
+
+        $(document).ready(function() {
+            // $('.gallery-content').slick({
+            //     arrows: true,
+            //     dots: true,
+            //     infinite: false,
+            //     speed: 300,
+            //     adaptiveHeight: true
+            // });
+        });
+    </script>
+
+     <script>
+    $(function() {
+        var Toast = Swal.mixin({
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete',
+            cancelButtonText: 'Cancel'
+        });
+        var Toast2 = Swal.mixin({
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya',
+            cancelButtonText: 'Tidak'
+        });
+        $(document).on('click', '.confirmDelete', function(event) {
+            var form =  $(this).closest("form");
+            event.preventDefault();
+            Toast.fire({
+                text: "Are you sure that you want to delete this?",
+                icon: 'warning'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        });
+        $(document).on('click', '.confirmDelete2', function(event) {
+            var form =  $(this).closest("form");
+            event.preventDefault();
+            Toast2.fire({
+                text: "Anda pasti untuk padam kad ini?",
+                icon: 'warning'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        });
+        $(document).on('click', '.confirmCancel', function(event) {
+            var form =  $(this).closest("form");
+            event.preventDefault();
+            Toast2.fire({
+                text: "Anda pasti untuk batalkan tempahan ini?",
+                icon: 'warning'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        });
+        $(document).on('click', '.confirmDeleteRsvp', function(event) {
+            var form =  $(this).closest("form");
+            event.preventDefault();
+            Toast2.fire({
+                text: "Anda pasti untuk padam RSVP ini?",
+                icon: 'warning'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        });
+        $(document).on('click', '.confirmDeleteWishes', function(event) {
+            var form =  $(this).closest("form");
+            event.preventDefault();
+            Toast2.fire({
+                text: "Anda pasti untuk padam ucapan ini?",
+                icon: 'warning'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        });
+    });
+</script> 
+    <!--=============== MAIN JS ===============-->
+    <script src="js/kapitan-main.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

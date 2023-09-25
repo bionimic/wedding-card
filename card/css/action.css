@@ -1,0 +1,89 @@
+.actionButton {
+  position: absolute;
+  right: 5em;
+}
+
+.triggerButton { display: none; }
+
+.triggerButton + label {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  background-image: linear-gradient(to right,#8b5cf6,#7c3aed,#6d28d9);
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 50%;
+  z-index: 999999;
+}
+
+.triggerButton + label:before, .triggerButton + label:after {
+  position: absolute;
+  content: '';
+  height: calc(3.5em / 2 );
+  width: .25em;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: .5em;
+  transition: all .25s;
+}
+
+.triggerButton + label:before {
+  height: calc(3.5em / 2 );
+  width: .25em;
+}
+
+.triggerButton + label:after {
+  width: calc(3.5em / 2 );
+  height: .25em;
+}
+
+.triggerButton:checked + label:before { transform: rotatez(-45deg); }
+
+.triggerButton:checked + label:after { transform: rotatez(-45deg); }
+
+.one, .two, .three {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5em;
+  padding: 0.65em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 99999;
+  transform: rotateZ(90deg);
+  font-size: 1em;
+  color: #fff;
+  transition-property: all;
+  transition-duration: .35s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.one::before, .two::before, .three::before {
+  font-size: 1.75em;
+}
+
+.triggerButton:checked ~ .one, .triggerButton:checked ~ .two, .triggerButton:checked ~ .three { opacity: 1; }
+
+.triggerButton:checked ~ .one {
+  background-color: #007BFF;
+  transform: translateX(-4.5em);
+  transition-delay: .2s;
+}
+
+.triggerButton:checked ~ .two {
+  background-color: #17A2B8;
+  transform: translateX(-3.5em) translateY(-3.5em);
+  transition-delay: .1s;
+}
+
+.triggerButton:checked ~ .three {
+  background-color: #6C757D;
+  transform: translateY(-5em);
+}
+
+.triggerButton:checked ~.one:hover, .triggerButton:checked ~ .two:hover, .triggerButton:checked ~ .three:hover { opacity: .9; }

@@ -1,0 +1,206 @@
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/* problem modal not showing */
+.fade:not(.show) {
+    opacity: inherit !important;
+}
+@font-face {
+    font-family: aussie-ocean;
+    src: url('fonts/aussie_ocean/Aussie\ Ocean.ttf');
+}
+@font-face {
+    font-family: carolina-mountains;
+    src: url('fonts/carolina_mountains/Carolina\ Mountains\ Personal\ Use.ttf');
+}
+@font-face {
+    font-family: type-machine;
+    src: url('fonts/type_machine/Type\ Machine.ttf');
+}
+html {
+    height: 100%;
+}
+body {
+    /* min-height: 100vh; */
+    margin: 0;
+    font-size: 13px !important;
+    font-family: monospace !important;
+    /* background-image: url("img/bg-silver.jpg");
+    background-repeat: repeat;
+    background-size: cover; */
+}
+.icon-white{
+    width: 35px;
+    height: 35px;
+}
+.icon {
+    width:25px
+}
+.rsvp {
+    font-size: 23px !important;
+    color: white !important;
+}
+.font-type-machine {
+    font-family: type-machine;
+}
+.font-type-cursive {
+    font-family: cursive;
+}
+.z-index-100 {
+    z-index: 100;
+}
+#template {
+    /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175), -0 1rem 3rem rgba(0, 0, 0, .175) !important; */
+    box-shadow: inherit;
+}
+/*  //////////
+    PAGE 1 
+    //////////
+*/ 
+#pg1 {
+    text-align: center;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+#pg1-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/bg-flower.png");
+    background-size: inherit;
+    background-position: top;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+    z-index: 1;
+}
+.pg1-title2-group {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: aussie-ocean;
+    font-size: 110px;
+    line-height: 0.75em;
+}
+/*  //////////
+    PAGE 2
+    //////////
+*/
+#pg2 {
+    /* codehere */
+}
+#pg2-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url("img/bg1.jpg");
+    background-size: inherit;
+    background-position: top;
+}
+#pg2 {
+    background-color: #fcf2f6;
+    background-color: #fcf2f6;
+}
+.pg2-line {
+    background-image: linear-gradient(#000, #000);
+    background-size: 1px 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/*  //////////
+    PAGE 2
+    //////////
+*/
+#pg-detail {
+    /* background-color: #fcf2f6; */
+}
+#pg-detail-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url("img/flower-gold.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.details {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* padding-bottom: 150px !important; */
+}
+#pg-end {
+    /* BACKGROUND */
+    /* background-image: url("img/bg-demo.jpg");
+    background-repeat: round;
+    background-size: cover; */
+
+    text-align: center;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px !important;
+}
+#pg-end {
+    line-height: 2;
+}
+#pg-end-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/tunang.jpg") ;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+    z-index: 1;
+}
+.bottom-fixed {
+    position: fixed !important;
+    bottom: 0;
+    z-index: 1030;
+}
+#pg-call{
+    background-color: #fcf2f6;
+}
+#pg-call dl dt {
+    text-align: right
+}
+#pg-call dl dd {
+    text-align: left
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Eiqal css */
+.poppin-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.great-vibe-font{
+    font-family: 'Great Vibes', cursive;
+}
+
+.subtext-font-weight {
+    font-weight: 500;
+}
+
+.subtext-font-size{
+    font-size:18px;
+}
+
+.text-title-font-size{
+    font-size:20px;
+}

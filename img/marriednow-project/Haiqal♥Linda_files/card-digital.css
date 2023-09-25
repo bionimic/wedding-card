@@ -1,0 +1,304 @@
+
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+
+.poppin-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.tagerine-font{
+    font-family: 'Tangerine', serif;
+}
+
+.cinzel-font {
+    font-family: 'Cinzel', serif;
+}
+
+.great-vibe-font{
+    font-family: 'Great Vibes', cursive;
+}
+
+.rouge-script-font{
+    font-family: 'Rouge Script', cursive;
+}
+
+.alice-font{
+    font-family: 'Alice', serif;
+}
+
+.oleo-script-font{
+    font-family: 'Oleo Script', cursive;
+}
+
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+#template {
+    box-shadow: inherit;
+    /* max-width: 600px; */
+}
+
+.nav__menu_card {
+    background-color: var(--container-color);
+    box-shadow: 0 3px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 6rem;
+    padding: 0 1rem;
+    display: grid;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+    font-size: 13px !important;
+}
+
+.bx-custom-icon-size {
+    font-size: 2.2rem!important;
+}
+
+.section__height {
+    height: 100vh;
+}
+
+.main-card {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_text {
+    text-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.25);
+    /* color: #f4d390; */
+    color: #000000;
+}
+
+.opening-bride-name{
+    font-size:72px;
+}
+
+.card-groom, .card-bride, .card-with {
+    font-size: 72px;
+    font-family: 'Tangerine', serif;
+    line-height: 1em;
+}
+
+.pb-16 {
+    padding-bottom: 4rem;
+}
+.wrapper {
+    text-align: center;
+    width: 75%;
+}
+
+.info-greeting, .info-details {
+    font-size: 16px;
+}
+
+.tbody-atucara-majlis td {
+    border:0px;
+}
+
+.z-index-100 {
+    z-index: 100;
+}
+
+.prayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .prayer-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+  }
+
+.section-title, .feature-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-opening{
+    padding-top:28%;
+}
+
+@media only screen and (max-width: 600px) {
+   .main-opening{
+        padding-top:45%;
+   }
+  }
+
+.btn-custom, .btn-custom .active, .btn-custom:hover, .btn-custom:focus {
+    background-color: #b29946 !important;
+    border-color: #b29946 !important;
+    padding-left: 45px !important;
+    padding-right:45px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.nav-icon-color, .nav-text-color {
+    color: white;
+}
+  
+/*=============== LOCATION ===============*/
+.location-icon > a{
+    text-decoration: none;
+    font-size: 16px;
+} 
+  
+.location-icon > a > i, .location-icon > a > span {
+    color: black;
+}
+
+/*=============== CALENDAR ===============*/
+.calendar-icon:first-of-type {
+    padding-bottom: 20px;
+}
+.calendar-icon > a{
+    text-decoration: none;
+} 
+
+.calendar-icon > a > i, .calendar-icon > a > span {
+    color: black;
+}
+
+.calendar-icon > a > span{
+    position: relative;
+    top: -3px;
+}
+
+/*=============== CALENDAR ===============*/
+.contact-icon > a > i {
+    color: black;
+}
+
+/*=============== START ===============*/
+
+.start {
+    z-index: 99999;
+    margin: auto;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+  
+.start-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+/*=============== MUSIC ===============*/
+.music {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 25px;
+  }
+  
+  .music > audio {
+    width: 100%;
+  }
+
+/*=============== LOADING ===============*/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #f7fafd;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #aa7eec;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+.details {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* padding-bottom: 150px !important; */
+}
+
+.bottom-fixed {
+    position: fixed !important;
+    bottom: 0;
+    z-index: 1030;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Eiqal css */
+
+.subtext-font-weight {
+    font-weight: 500;
+}
+
+.subtext-font-size{
+    font-size:18px;
+}
+
+.text-title-font-size{
+    font-size:20px;
+}
