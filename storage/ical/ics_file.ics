@@ -4,7 +4,7 @@ PRODID:-//ical.marudot.com//iCal Event Maker
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
 TZID:Asia/Kuala_Lumpur
-LAST-MODIFIED:20240210T015911Z
+LAST-MODIFIED:20240309T015911Z
 TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Kuala_Lumpur
 X-LIC-LOCATION:Asia/Kuala_Lumpur
 BEGIN:STANDARD
@@ -17,13 +17,13 @@ END:VTIMEZONE
 BEGIN:VEVENT
 DTSTAMP:20240210T115915Z
 UID:1691236683686-21604@ical.marudot.com
-DTSTART;TZID=Asia/Kuala_Lumpur:20240210T110000
-DTEND;TZID=Asia/Kuala_Lumpur:20240210T163000
-SUMMARY:Walimatulurus Fawaz & Dalilah
-LOCATION:HT03, Menara Kuala Lumpur\, No 2, Jalan Punchak\, Off, Jalan P. Ramlee, 50250 Kuala Lumpur\, Malaysia
+DTSTART;TZID=Asia/Kuala_Lumpur:20240309T150000
+DTEND;TZID=Asia/Kuala_Lumpur:20240309T190000
+SUMMARY:Izzara Jasmine Birthday Party
+LOCATION:No 11A, Jalan Lobak Merah 24/20\, Seksyen 24\, 40300 Shah Alam\, Malaysia
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Walimatulurus Fawaz & Dalilah
+DESCRIPTION:Izzara Jasmine Birthday Party
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
